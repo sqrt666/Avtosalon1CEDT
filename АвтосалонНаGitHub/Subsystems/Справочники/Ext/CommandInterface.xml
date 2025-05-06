@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.Справочники.Subsystem.Продажи</Subsystem>
+		<Subsystem>Subsystem.Справочники.Subsystem.Покупки</Subsystem>
+		<Subsystem>Subsystem.Справочники.Subsystem.Персонал</Subsystem>
+		<Subsystem>Subsystem.Справочники.Subsystem.Зарплата</Subsystem>
+		<Subsystem>Subsystem.Справочники.Subsystem.НаличныеДеньги</Subsystem>
+		<Subsystem>Subsystem.Справочники.Subsystem.Настройки</Subsystem>
+	</SubsystemsOrder>
+	<GroupsOrder>
+		<Group>CommandGroup.Продажи</Group>
+		<Group>CommandGroup.Настройки</Group>
+		<Group>CommandGroup.Покупки</Group>
+		<Group>CommandGroup.Персонал</Group>
+		<Group>CommandGroup.НаличныеДеньги</Group>
+		<Group>ActionsPanelCreate</Group>
+	</GroupsOrder>
+</CommandInterface>

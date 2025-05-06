@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="СтатьяЗатрат" id="10">
+			<DataPath>Объект.СтатьяЗатрат</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СтатьяЗатратКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="СтатьяЗатратРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<CheckBoxField name="ПериодДействияБазовый" id="74">
+			<DataPath>Объект.ActionPeriodIsBasic</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПериодДействияБазовыйКонтекстноеМеню" id="75"/>
+			<ExtendedTooltip name="ПериодДействияБазовыйРасширеннаяПодсказка" id="76"/>
+		</CheckBoxField>
+		<Pages name="Группа1" id="48">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="49"/>
+			<ChildItems>
+				<Page name="ГруппаФормулаРасчета" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Формула расчета</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа формула расчета</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="ГруппаФормулаРасчетаРасширеннаяПодсказка" id="51"/>
+					<ChildItems>
+						<InputField name="ФормулаРасчета" id="29">
+							<DataPath>Объект.ФормулаРасчета</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ФормулаРасчетаКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="ФормулаРасчетаРасширеннаяПодсказка" id="31"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="БазовыеВидыРасчетов" id="52">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Базовые виды расчетов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Базовые виды расчетов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="БазовыеВидыРасчетовРасширеннаяПодсказка" id="53"/>
+					<ChildItems>
+						<Table name="БазовыеВидыРасчета" id="32">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.BaseCalculationTypes</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="БазовыеВидыРасчетаКонтекстноеМеню" id="33"/>
+							<AutoCommandBar name="БазовыеВидыРасчетаКоманднаяПанель" id="34"/>
+							<ExtendedTooltip name="БазовыеВидыРасчетаРасширеннаяПодсказка" id="35"/>
+							<SearchStringAddition name="БазовыеВидыРасчетаСтрокаПоиска" id="36">
+								<AdditionSource>
+									<Item>БазовыеВидыРасчета</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="БазовыеВидыРасчетаСтрокаПоискаКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="БазовыеВидыРасчетаСтрокаПоискаРасширеннаяПодсказка" id="38"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="БазовыеВидыРасчетаСостояниеПросмотра" id="39">
+								<AdditionSource>
+									<Item>БазовыеВидыРасчета</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="БазовыеВидыРасчетаСостояниеПросмотраКонтекстноеМеню" id="40"/>
+								<ExtendedTooltip name="БазовыеВидыРасчетаСостояниеПросмотраРасширеннаяПодсказка" id="41"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="БазовыеВидыРасчетаУправлениеПоиском" id="42">
+								<AdditionSource>
+									<Item>БазовыеВидыРасчета</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="БазовыеВидыРасчетаУправлениеПоискомКонтекстноеМеню" id="43"/>
+								<ExtendedTooltip name="БазовыеВидыРасчетаУправлениеПоискомРасширеннаяПодсказка" id="44"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="БазовыеВидыРасчетаВидРасчета" id="45">
+									<DataPath>Объект.BaseCalculationTypes.CalculationType</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="БазовыеВидыРасчетаВидРасчетаКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="БазовыеВидыРасчетаВидРасчетаРасширеннаяПодсказка" id="47"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ВедущиеВидыРасчетов" id="54">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ведущие виды расчетов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ведущие виды расчетов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="ВедущиеВидыРасчетовРасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<Table name="ВедущиеВидыРасчета" id="13">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.LeadingCalculationTypes</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВедущиеВидыРасчетаКонтекстноеМеню" id="14"/>
+							<AutoCommandBar name="ВедущиеВидыРасчетаКоманднаяПанель" id="15"/>
+							<ExtendedTooltip name="ВедущиеВидыРасчетаРасширеннаяПодсказка" id="16"/>
+							<SearchStringAddition name="ВедущиеВидыРасчетаСтрокаПоиска" id="17">
+								<AdditionSource>
+									<Item>ВедущиеВидыРасчета</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВедущиеВидыРасчетаСтрокаПоискаКонтекстноеМеню" id="18"/>
+								<ExtendedTooltip name="ВедущиеВидыРасчетаСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВедущиеВидыРасчетаСостояниеПросмотра" id="20">
+								<AdditionSource>
+									<Item>ВедущиеВидыРасчета</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВедущиеВидыРасчетаСостояниеПросмотраКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="ВедущиеВидыРасчетаСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВедущиеВидыРасчетаУправлениеПоиском" id="23">
+								<AdditionSource>
+									<Item>ВедущиеВидыРасчета</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВедущиеВидыРасчетаУправлениеПоискомКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="ВедущиеВидыРасчетаУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ВедущиеВидыРасчетаВидРасчета" id="26">
+									<DataPath>Объект.LeadingCalculationTypes.CalculationType</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ВедущиеВидыРасчетаВидРасчетаКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ВедущиеВидыРасчетаВидРасчетаРасширеннаяПодсказка" id="28"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаВытесняющиеВидыРасчета" id="56">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вытесняющие виды расчета</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вытесняющие виды расчета</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="ГруппаВытесняющиеВидыРасчетаРасширеннаяПодсказка" id="57"/>
+					<ChildItems>
+						<Table name="ВытесняющиеВидыРасчета" id="58">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.DisplacingCalculationTypes</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВытесняющиеВидыРасчетаКонтекстноеМеню" id="59"/>
+							<AutoCommandBar name="ВытесняющиеВидыРасчетаКоманднаяПанель" id="60"/>
+							<ExtendedTooltip name="ВытесняющиеВидыРасчетаРасширеннаяПодсказка" id="61"/>
+							<SearchStringAddition name="ВытесняющиеВидыРасчетаСтрокаПоиска" id="62">
+								<AdditionSource>
+									<Item>ВытесняющиеВидыРасчета</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВытесняющиеВидыРасчетаСтрокаПоискаКонтекстноеМеню" id="63"/>
+								<ExtendedTooltip name="ВытесняющиеВидыРасчетаСтрокаПоискаРасширеннаяПодсказка" id="64"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВытесняющиеВидыРасчетаСостояниеПросмотра" id="65">
+								<AdditionSource>
+									<Item>ВытесняющиеВидыРасчета</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВытесняющиеВидыРасчетаСостояниеПросмотраКонтекстноеМеню" id="66"/>
+								<ExtendedTooltip name="ВытесняющиеВидыРасчетаСостояниеПросмотраРасширеннаяПодсказка" id="67"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВытесняющиеВидыРасчетаУправлениеПоиском" id="68">
+								<AdditionSource>
+									<Item>ВытесняющиеВидыРасчета</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВытесняющиеВидыРасчетаУправлениеПоискомКонтекстноеМеню" id="69"/>
+								<ExtendedTooltip name="ВытесняющиеВидыРасчетаУправлениеПоискомРасширеннаяПодсказка" id="70"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ВытесняющиеВидыРасчетаВидРасчета" id="71">
+									<DataPath>Объект.DisplacingCalculationTypes.CalculationType</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ВытесняющиеВидыРасчетаВидРасчетаКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="ВытесняющиеВидыРасчетаВидРасчетаРасширеннаяПодсказка" id="73"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ChartOfCalculationTypesObject.Начисления</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>
